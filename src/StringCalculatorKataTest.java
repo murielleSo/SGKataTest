@@ -29,5 +29,10 @@ public class StringCalculatorKataTest {
         Assert.assertEquals(stringCalculatorKata.addWithTwoDelimeter("1\n2,3"), 6);
     }
 
+    @Test
+    public void shouldReturn3ForAnyDelimeter(){
+        Assert.assertEquals(stringCalculatorKata.addWithManyDelimeter("//;\n1;2"), 3);
+    }
+
 
 }
