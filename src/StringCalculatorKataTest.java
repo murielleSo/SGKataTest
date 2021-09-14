@@ -15,7 +15,14 @@ public class StringCalculatorKataTest {
     }
 
     @Test
-    public void shouldReturn6ForNumbersIsNotEmpty(){
-        Assert.assertEquals(stringCalculatorKata.add("1,2,3"), 6);
+    public void shouldReturn3ForNumbersIsNotEmpty(){
+        Assert.assertEquals(stringCalculatorKata.add("1,2"), 3);
     }
+
+    @Test
+    public void shouldReturn26ForUnknowNumbers(){
+        Assert.assertEquals(stringCalculatorKata.add("1,2,3", "10,10"), 26);
+    }
+
+
 }
