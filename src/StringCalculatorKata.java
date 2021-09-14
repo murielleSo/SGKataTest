@@ -28,7 +28,12 @@ public class StringCalculatorKata {
                 .sum();
     }
 
-    /*public int Add(String numbers) {
-        return 0;
-    }*/
+    public int addWithTwoDelimeter(String numbers) {
+
+        return Arrays.stream(numbers.split(",|\n"))
+                .mapToInt(Integer::parseInt)
+                .sum();
+    }
+
+    
 }

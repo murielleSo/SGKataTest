@@ -2,7 +2,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class StringCalculatorKataTest {
-    private StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
+    private final StringCalculatorKata stringCalculatorKata = new StringCalculatorKata();
 
     @Test
     public void shouldReturn0ForNumbersIsEmpty(){
@@ -22,6 +22,11 @@ public class StringCalculatorKataTest {
     @Test
     public void shouldReturn26ForUnknowNumbers(){
         Assert.assertEquals(stringCalculatorKata.add("1,2,3", "10,10"), 26);
+    }
+
+    @Test
+    public void shouldReturn6ForTwoDelimeter(){
+        Assert.assertEquals(stringCalculatorKata.addWithTwoDelimeter("1\n2,3"), 6);
     }
 
 
