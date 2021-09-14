@@ -26,12 +26,17 @@ public class StringCalculatorKataTest {
 
     @Test
     public void shouldReturn6ForTwoDelimeter(){
-        Assert.assertEquals(stringCalculatorKata.addWithTwoDelimeter("1\n2,3"), 6);
+        Assert.assertEquals(stringCalculatorKata.addWithTwoCommaDelimeter("1\n2,3"), 6);
     }
 
     @Test
     public void shouldReturn3ForAnyDelimeter(){
-        Assert.assertEquals(stringCalculatorKata.addWithManyDelimeter("//;\n1;2"), 3);
+        Assert.assertEquals(stringCalculatorKata.addWithAnyDelimeter("//;\n1;2"), 3);
+    }
+
+    @Test
+    public void shouldReturn6ForAnyDelimeter(){
+        Assert.assertEquals(stringCalculatorKata.addWithAnyDelimeter("//&\n1&2&3"), 6);
     }
 
 
