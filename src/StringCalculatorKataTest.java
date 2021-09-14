@@ -39,5 +39,15 @@ public class StringCalculatorKataTest {
         Assert.assertEquals(stringCalculatorKata.addWithAnyDelimeter("//&\n1&2&3"), 6);
     }
 
+    @Test
+    public void shouldThrowsExceptionWithNegativesValues(){
+        try {
+            stringCalculatorKata.addthrowsExeptionWithNegativeNumbers("1,-2,-5,4");
+        } catch (IllegalArgumentException e){
+            Assert.assertEquals(e.getMessage(), "negatives not allowed [-2, -5]");
+        }
+
+    }
+
 
 }
